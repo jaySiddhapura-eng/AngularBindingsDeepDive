@@ -1,0 +1,24 @@
+<div class="container">
+        <app-cockpit 
+        (serverCreated)="onServerAdded($event)"
+        (blueprintCreated)="onBlueprintAdded($event)"
+        ></app-cockpit>
+  <hr>
+
+  <div class="row">
+      <div class="col-xs-12">
+
+        <app-server-element *ngFor="let serverElement of serverElements"
+        [srvElement]="serverElement"></app-server-element>
+           
+      </div>
+  </div>
+
+
+</div>
+
+<!--what is going on here?-->
+<!--app.component.html-->
+<!--in this html file the serverElement array from app.component.ts is being displayed-->
+
+<!--due to effect of @input() decorator now element is available outside its respective component-->

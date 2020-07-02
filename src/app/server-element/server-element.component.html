@@ -1,0 +1,32 @@
+<div class="panel panel-default"><!--ngfor to iterate over serverElement array-->
+
+    <div class="panel-heading">
+        {{element.name}}
+    </div>
+
+    <div class="panel-body">
+           <p>
+           <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong> <!--string interpolation-->
+           <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em> <!--string interpolation-->
+           </p>
+    </div>
+
+</div>
+
+<!--*ngIf is being used to obtain conditional style change of the html element-->
+<!--so what we are doing here?-->
+<!-- we are using structural directive ngIf to conditionally change the structure of the html element-->
+
+<!--what is going on here?-->
+
+<!--server-element.component.ts -->
+<!--element defines the properties of the server-->
+<!--this property includes "type , name , content"-->
+
+<!--server-element.component.html-->
+<!--the previously defined element in .ts file is being used in this html file-->
+
+<!--since the .ts and .html files are associated to the same component-->
+<!--the element from .ts file is accessible by html of the same component-->
+
+<!--conventional way of connection between ts and html file of the same component-->
