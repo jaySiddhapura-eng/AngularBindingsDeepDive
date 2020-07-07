@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -11,6 +11,8 @@ export class CockpitComponent implements OnInit {
   // this property emmits the event with the object which has serverName and serverContent
   @Output() serverCreated = new EventEmitter<{serverName:string, serverContent:string}>();
   @Output() blueprintCreated = new EventEmitter<{serverName:string, serverContent:string}>();
+
+  @ViewChild('viewChildVar', {static: true}) viewChildVar;
 
   newServerName = '';
   newServerContent = '';
@@ -38,6 +40,16 @@ export class CockpitComponent implements OnInit {
         serverContent:this.newServerContent
       }
     );
+  }
+
+  // this method is used for demo of local reference
+  sendLocalref(inputedVar){
+    console.log('local ref '+ inputedVar.value);
+  }
+
+  // this method is used for demo of viewChild functionality
+  showValOfViewChildData(){
+    console.log(this.viewChildVar);
   }
 
 }

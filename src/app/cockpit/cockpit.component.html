@@ -8,6 +8,12 @@
 
         <label>Server Content</label>
         <input type="text" class="form-control" [(ngModel)]="newServerContent"> <!--two way binding-->
+        
+        <label>locally referenced var</label> <!--an input field whoes data directly goes as an parameter to the method-->
+        <input type="text" class="form-control" #localRefVar> <!--two way binding-->
+
+        <label>following input  variable reach to the consol using viewChild approach</label> <!--an input field whoes data directly goes as an parameter to the method-->
+        <input type="text" class="form-control" #viewChildVar> <!--two way binding-->
 
         <br>
         <!--two buttons-->
@@ -21,7 +27,20 @@
             class="btn btn-primary"
             (click)="onAddBlueprint()">   <!--event binding-->
             Add Server Blueprint
-        </button>  
+        </button> 
+        
+        <button
+        class="btn btn-primary"
+        (click)="sendLocalref(localRefVar)">   <!--event binding--> <!--data localRefVar is the referece of the input field-->
+        Add Server Blueprint
+        </button> 
+
+        <button
+        class="btn btn-primary"
+        (click)="showValOfViewChildData()">   <!--event binding--> <!--data localRefVar is the referece of the input field-->
+        verify vewChild()
+        </button> 
+        
 
     </div>
 </div>
