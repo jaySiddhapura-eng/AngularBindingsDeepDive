@@ -1,21 +1,31 @@
 <div class="container">
-        <app-cockpit 
+  <div class="row">
+    <div class="col-md-7">
+
+      <app-cockpit 
         (serverCreated)="onServerAdded($event)"
         (blueprintCreated)="onBlueprintAdded($event)"
         ></app-cockpit>
-  <hr>
+      <hr>
 
-  <div class="row">
-      <div class="col-xs-12">
+      <app-server-element *ngFor="let serverElement of serverElements"
+        [srvElement]="serverElement">
 
-        <app-server-element *ngFor="let serverElement of serverElements"
-        [srvElement]="serverElement"></app-server-element>
-           
-      </div>
+          <!--follwing section will be rendered inside the app-server-element.html-->
+          <!--using ng-content directive-->
+          <p> <!--this section was previously in server-element.component.html-->
+          <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong> <!--string interpolation-->
+          <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em> <!--string interpolation-->
+          </p>
+      
+      </app-server-element>
+
   </div>
 
 
-</div>
+  </div>
+</div>  
+
 
 <!--what is going on here?-->
 <!--app.component.html-->

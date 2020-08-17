@@ -5,10 +5,15 @@
     </div>
 
     <div class="panel-body">
-           <p>
-           <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong> <!--string interpolation-->
-           <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em> <!--string interpolation-->
-           </p>
+        <ng-content></ng-content><!--example for ng-content-->
+
+            <!-- this section is implemented in the app.component.html
+                <p> 
+                <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong> <!--string interpolation-->
+            <!--  <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em> <!--string interpolation-->
+            <!--   </p> -->
+            
+
     </div>
 
 </div>
