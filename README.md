@@ -12,7 +12,9 @@
 * [ContentChild](#ContentChild)<br>
 * [Project Structure ](#Project-Structure)<br>
 
-## Need of Custom Bindings [:arrow_up:](#Table-of-Contents )<br>
+## Need of Custom Bindings 
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. Segregation of the entire app into several small component is a key development practice
 2. While segregating the app, it is highly probable that transfer data between different components occures
@@ -20,7 +22,9 @@
 4. Although there is a hard way to doing it, using custom binding
 5. There are basically two types of custom binding : Property binding and Event binding
 
-## Custom Property Binding Parent to Children [:arrow_up:](#Table-of-Contents )<br>
+## Custom Property Binding Parent to Children 
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. Custom Property binding is used when data transfer needed from HTML file of one component to the TS file of other component
 
@@ -89,7 +93,9 @@
 
 10. Above example works only when two component has a parent children relation
 
-## Custom Event Binding Children to Parent [:arrow_up:](#Table-of-Contents )<br>
+## Custom Event Binding Children to Parent
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. Custom Event binding is used when data transfer need from TS file of one component to the HTML file of the another component
 
@@ -149,7 +155,9 @@
    }
    ~~~
 
-## View Encapsulation [:arrow_up:](#Table-of-Contents )<br>
+## View Encapsulation
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. Angular enforce the encapsulation on the elements of HTML file
 
@@ -171,7 +179,9 @@
    None, Emulated, shadowDom, Native
    ~~~
 
-## Local Reference [:arrow_up:](#Table-of-Contents )<br>
+## Local Reference
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. Using variable inside the HTML template which is declared in the same HTML template
 
@@ -193,7 +203,9 @@
    }
    ~~~
 
-## ViewChild [:arrow_up:](#Table-of-Contents )<br>
+## ViewChild
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. To remember a variable declared in HTML and use it in TS file
 
@@ -211,7 +223,9 @@
    }
    ~~~
 
-## NgContent [:arrow_up:](#Table-of-Contents )<br>
+## NgContent
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. Calling the child component in parent component as follow
 
@@ -234,7 +248,9 @@
    <!--now paragraph written in the parent component will be render in between ng-content tag-->
    ~~~
 
-## Component Life Cycle [:arrow_up:](#Table-of-Contents )<br>
+## Component Life Cycle
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. When component get initialized by angular and added into DOM
 2. Angular goes through various process phases
@@ -247,7 +263,9 @@
    3. **ngDoCheck**: This method get executed once change detection runs, button clicked get checked too
    4. **ngOnDestroy**: This method get executed when component get destroyed 
 
-## ContentChild [:arrow_up:](#Table-of-Contents )<br>
+## ContentChild
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. By using we can project the content of one component into another component
 
@@ -279,7 +297,9 @@
    // now the paragraph can be access in the TS using "para" name
    ~~~
 
-## Project Structure [:arrow_up:](#Table-of-Contents )<br>
+## Project Structure
+
+## 	[:arrow_up:](#Table-of-Contents )<br>
 
 1. Following diagram explains how custom property and event binding facilitate us to perform inter component communication. [code available with the repo of this tutorial]
 
